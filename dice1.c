@@ -4,11 +4,18 @@
 
 int main(){
   int a[2],sum,i;
+  char s[15];
 
   sum = 0;
 
+  printf("What is your name?\n");
+  printf("> ");
+
+  scanf("%s",s);
+
+  printf("Hello, %s!\n",s);
+
   srand((unsigned) time(NULL));
-  
   printf("Rolling the dice...\n");
   for(i=0;i<2;i++){
     printf("Dice %d: ",i+1);
@@ -19,8 +26,8 @@ int main(){
 
   printf("Total value: %d\n",sum);
 
-  if(sum>=7) printf("You won!\n");
-  else  printf("You lost!\n");
+  if(sum>=7) printf("%s won!\n",s);
+  else  printf("%s lost!\n",s);
 
   return 0;
 }
